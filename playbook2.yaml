@@ -1,0 +1,23 @@
+- name: Second playbook
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Task1
+      apt:
+        update_cache: true
+    - name: Task2
+      apt:
+        name: nginx
+        state: latest
+
+    - name: Task3
+      copy:
+        src: ./index.html
+        dest: /var/www/html/index.html
+
+    - name: Task4
+      sysvinit:
+        name: nginx
+        state: restarted
+        enabled: yes
+
