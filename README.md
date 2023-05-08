@@ -2,7 +2,7 @@
 
 ### Tasks to practice with Ansible.
 
-<details>
+<details open>
   <summary>Task1</summary>
   <ul>
     <li>Install ansible</li>
@@ -14,7 +14,7 @@
   </ul>
 </details>
 
-<details>
+<details open>
   <summary>Task2</summary>
   <ul>
     <li> Create the inventory file.</li>
@@ -24,7 +24,7 @@
   </ul>
 </details>
 
-<details>
+<details open>
   <summary>Task3</summary>
   <ul>
     <li>Create the configuration file.</li>
@@ -34,7 +34,7 @@
   </ul>
 </details>
 
-<details>
+<details open>
   <summary>Task4</summary>
   <ul>
     <li> Insert the correct values in the configuration file.</li>
@@ -43,7 +43,7 @@
  </ul>
 </details>
 
-<details>
+<details open>
   <summary>Task5</summary>
   <ul> 
     <li>Write your first playbook file.</li>
@@ -51,7 +51,7 @@
   </ul>
 </details>
 
-<details>
+<details open>
   <summary>Task6</summary>
   <ul> 
      <li>Explore some <a href="https://docs.ansible.com/ansible/latest/collections/index_module.html#ansible-builtin">ansible-builtin modules</a> like: (apt, dnf, package, service, command, copy, user, group, lineinfile, authorized_key, etc.)<br>
@@ -61,5 +61,24 @@
     <li>Copy index.html from controller to host 1.</li>
     <li>Restart nginx service.</li>
     <li>Can you see your index.html file when you hit host 1 on port 80 ?</li> 
+  </ul>
+</details>
+
+<details open>
+  <summary>Task7_Roles</summary>
+  <ul>
+    <li> Create your first role with name (web)</li>
+    <li> The task book will include:
+       <ol type="1">   
+      <li> installing a package </li>
+             - (get the package name from vars)
+      <li> copying a list of files from controller to host using loop </li>
+            - (get the list of file names from vars)
+             <br>- (the actual files will be stored in ./roles/web/files)
+             <br>- (will be executed using Handlers)
+    </li>
+      </ol>
+<li>Restart the service of the installed package</li>
+    - (will be executed using Handlers chaining)
   </ul>
 </details>
