@@ -1,0 +1,12 @@
+- name: Task1
+  apt:
+    update_cache: true
+
+
+- name: Task2
+  apt:
+    name: "{{ package_name }}"
+    state: "{{ package_version }}"
+  notify: my_handler1
+
+

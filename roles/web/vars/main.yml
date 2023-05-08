@@ -1,0 +1,8 @@
+package_name: nginx
+package_version: latest
+package_state: restarted
+file_list:
+  - index.html.j2
+  - script.js
+  - style.css
+welcome_msg: Hello world. this command using jinja2

@@ -1,0 +1,14 @@
+- name: my_handler1
+  copy:
+    src: "{{ item }}"
+    dest: /var/www/html/{{ item }}
+  loop: "{{ file_list }}"
+  notify: my_handler2
+
+
+- name: my_handler2
+  sysvinit:
+    name: "{{ package_name }}"
+    state: "{{ package_state }}"
+
+
