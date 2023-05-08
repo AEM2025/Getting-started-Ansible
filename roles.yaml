@@ -1,0 +1,4 @@
+- name: playbook6
+  hosts: web_servers
+  roles:
+    - web
